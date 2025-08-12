@@ -1,0 +1,493 @@
+﻿id: "00000000-0000-0000-0000-000000000111"
+code: "office_flirt"
+start_scene: "scene_001"
+
+items:
+  - code: "tshirt_your"
+    type: "gift"
+    heat_bonus: 0
+    i18n:
+      ru: { name: "Твоя футболка", description: "Отдать Софии, если её форма испорчена" }
+      en: { name: "Your T-shirt", description: "Give Sofia when her kit is ruined" }
+      es: { name: "Tu camiseta", description: "Dársela a Sofía si su ropa se arruina" }
+      de: { name: "Dein T-Shirt", description: "Sofia geben, wenn ihre Kleidung ruiniert ist" }
+      fr: { name: "Ton T-shirt", description: "À donner à Sofia si sa tenue est abîmée" }
+
+  - code: "whip"
+    type: "nsfw"
+    heat_bonus: 1
+    i18n:
+      ru: { name: "Плётка (шуточная)", description: "Откроет смелую шутливую сцену" }
+      en: { name: "Whip (joke)", description: "Unlocks a cheeky joke scene" }
+      es: { name: "Látigo (broma)", description: "Desbloquea una escena atrevida" }
+      de: { name: "Peitsche (Scherz)", description: "Schaltet eine freche Szene frei" }
+      fr: { name: "Fouet (blague)", description: "Débloque une scène coquine" }
+
+  - code: "sport_top_red"
+    type: "cosmetic"
+    heat_bonus: 0
+    i18n:
+      ru: { name: "Красный топ", description: "Косметика: меняет арт в паре сцен" }
+      en: { name: "Red sport top", description: "Cosmetic: alters art in a few scenes" }
+      es: { name: "Top rojo", description: "Cosmético: cambia el arte en escenas" }
+      de: { name: "Rotes Top", description: "Kosmetik: ändert Artwork in Szenen" }
+      fr: { name: "Top rouge", description: "Cosmétique : modifie l’art de scènes" }
+
+scenes:
+  - code: "scene_001"
+    image_url: ""
+    energy_cost: 0
+    is_premium: false
+    text:
+      ru: "Университетский спорткомплекс. Ты спешишь на физкультуру и по ошибке заходишь в женскую раздевалку. Все герои старше 18."
+      en: "University gym. You rush to PE class and accidentally enter the girls’ locker room. All characters are 18+."
+      es: "Gimnasio universitario. Entras por error al vestuario de chicas. Todos son mayores de 18."
+      de: "Uni-Sporthalle. Du gehst versehentlich in die Damenumkleide. Alle sind 18+."
+      fr: "Salle de sport de l’université. Tu entres par erreur au vestiaire des filles. Tous ont 18+."
+    choices:
+      - code: "continue"
+        label: {ru: "Ой…", en: "Uh…", es: "Eh…", de: "Äh…", fr: "Euh…"}
+        leads_to: "scene_002"
+
+  - code: "scene_002"
+    image_url: ""
+    energy_cost: 1
+    is_premium: false
+    text:
+      ru: "Скромная одногруппница София резко оборачивается, смущается и строго просит выйти."
+      en: "Your modest classmate Sofia turns, flustered, and firmly asks you to leave."
+      es: "Tu compañera Sofía, tímida, se sonroja y te pide salir."
+      de: "Deine schüchterne Kommilitonin Sofia bittet dich bestimmt zu gehen."
+      fr: "Ta discrète camarade Sofia, gênée, te demande de sortir."
+    choices:
+      - code: "apologize"
+        label: {ru: "Извиниться и уйти", en: "Apologize and leave", es: "Disculparte y salir", de: "Entschuldigen und gehen", fr: "S’excuser et partir"}
+        leads_to: "scene_003"
+
+  - code: "scene_003"
+    image_url: ""
+    energy_cost: 1
+    is_premium: false
+    text:
+      ru: "На занятии сидите рядом. София всё ещё сдержанна, но слушает твои извинения."
+      en: "In class you sit nearby. Sofia stays reserved but listens to your apology."
+      es: "En clase os sentáis cerca. Sofía se mantiene reservada pero escucha."
+      de: "Im Kurs sitzt ihr nebeneinander. Sofia bleibt zurückhaltend, hört aber zu."
+      fr: "Au cours vous êtes proches. Sofia reste réservée mais écoute."
+    choices:
+      - code: "go4"
+        label: {ru: "Дальше", en: "Continue", es: "Continuar", de: "Weiter", fr: "Continuer"}
+        leads_to: "scene_004"
+
+  - code: "scene_004"
+    image_url: ""
+    energy_cost: 1
+    is_premium: false
+    text:
+      ru: "Перекур между подходами. Хочешь разрядить атмосферу."
+      en: "Break between sets. You try to lighten the mood."
+      es: "Pausa entre series. Intentas aliviar la tensión."
+      de: "Pause zwischen Sets. Du lockerst die Stimmung."
+      fr: "Pause entre séries. Tu détends l’atmosphère."
+    choices:
+      - code: "bold_joke"
+        gem_cost: 10
+        heat_points: 1
+        label: {ru: "Смелая шутка (10💎)", en: "Bold joke (10💎)", es: "Broma atrevida (10💎)", de: "Gewagter Witz (10💎)", fr: "Blague audacieuse (10💎)"}
+        leads_to: "scene_004_peek"
+      - code: "play_safe"
+        label: {ru: "Пошутить мягче", en: "Keep it mild", es: "Broma suave", de: "Sanft scherzen", fr: "Blague légère"}
+        leads_to: "scene_005"
+
+  - code: "scene_004_peek"
+    image_url: ""
+    energy_cost: 0
+    is_premium: false
+    text:
+      ru: "София смущённо фыркает. Ты видишь, как её строгость на миг тает."
+      en: "Sofia huffs, flustered; her strictness softens for a moment."
+      es: "Sofía resopla, ruborizada; su rigidez se suaviza por un instante."
+      de: "Sofia schnaubt verlegen; ihre Strenge taut kurz auf."
+      fr: "Sofia souffle, gênée ; sa sévérité se dissipe un instant."
+    choices:
+      - code: "back_to_5"
+        label: {ru: "Продолжить", en: "Continue", es: "Continuar", de: "Weiter", fr: "Continuer"}
+        leads_to: "scene_005"
+
+  - code: "scene_005"
+    image_url: ""
+    energy_cost: 1
+    is_premium: false
+    text:
+      ru: "София замечает, что её футболка испорчена. Она явно смущена."
+      en: "Sofia’s shirt is ruined. She’s clearly embarrassed."
+      es: "La camiseta de Sofía está arruinada. Está avergonzada."
+      de: "Sofias Shirt ist ruiniert. Sie ist verlegen."
+      fr: "Le t-shirt de Sofia est abîmé. Elle est gênée."
+    choices:
+      - code: "give_tshirt"
+        requires_item: "tshirt_your"
+        label: {ru: "Отдать свою футболку", en: "Offer your T-shirt", es: "Dar tu camiseta", de: "Dein T-Shirt geben", fr: "Donner ton T-shirt"}
+        leads_to: "scene_005_soft"
+      - code: "no_item"
+        label: {ru: "Промолчать", en: "Say nothing", es: "No decir nada", de: "Schweigen", fr: "Se taire"}
+        leads_to: "scene_006"
+
+  - code: "scene_005_soft"
+    image_url: ""
+    energy_cost: 0
+    is_premium: false
+    text:
+      ru: "Она принимает футболку, взгляд теплеет. Скромность остаётся, но лёд тронулся."
+      en: "She accepts the shirt, her gaze warms. Still modest, yet a bit closer."
+      es: "Acepta la camiseta; su mirada se suaviza. Sigue modesta, pero más cercana."
+      de: "Sie nimmt das Shirt; ihr Blick wird wärmer. Weiter reserviert, aber näher."
+      fr: "Elle accepte le t-shirt ; son regard s’adoucit. Discrète, mais plus proche."
+    choices:
+      - code: "to6"
+        label: {ru: "Дальше", en: "Next", es: "Siguiente", de: "Weiter", fr: "Suite"}
+        leads_to: "scene_006"
+
+  - code: "scene_006"
+    image_url: ""
+    energy_cost: 1
+    is_premium: false
+    text:
+      ru: "Тренер задерживает вас доделать упражнения. Спортзал пустеет."
+      en: "Coach asks you to finish reps; the gym empties."
+      es: "El entrenador os deja terminar; el gimnasio se vacía."
+      de: "Der Trainer lässt euch fertig werden; die Halle leert sich."
+      fr: "Le coach vous laisse finir ; la salle se vide."
+    choices:
+      - code: "to7"
+        label: {ru: "Продолжить", en: "Continue", es: "Continuar", de: "Weiter", fr: "Continuer"}
+        leads_to: "scene_007"
+
+  - code: "scene_007"
+    image_url: ""
+    energy_cost: 1
+    is_premium: false
+    text:
+      ru: "София мнётся у двери душевых. Скромность борется с любопытством."
+      en: "Sofia lingers by the showers, modesty wrestling with curiosity."
+      es: "Sofía duda junto a las duchas: modestia vs. curiosidad."
+      de: "Sofia zögert bei den Duschen: Schüchternheit vs. Neugier."
+      fr: "Sofia hésite près des douches : pudeur contre curiosité."
+    choices:
+      - code: "enter_premium"
+        is_premium: true
+        label: {ru: "Пойти вместе в душ (Премиум)", en: "Go to showers (Premium)", es: "Ir a las duchas (Premium)", de: "Unter die Dusche (Premium)", fr: "Aller aux douches (Premium)"}
+        leads_to: "P1"
+      - code: "keep_free"
+        label: {ru: "Пойти на кофе", en: "Grab coffee", es: "Ir por café", de: "Kaffee holen", fr: "Aller prendre un café"}
+        leads_to: "scene_008"
+
+  - code: "scene_008"
+    image_url: ""
+    energy_cost: 1
+    is_premium: false
+    text:
+      ru: "Кафе на кампусе. София смотрит осторожно, но не отстраняется."
+      en: "Campus café. Sofia’s cautious, but not distant."
+      es: "Café del campus. Sofía es cauta, pero no distante."
+      de: "Campus-Café. Sofia ist vorsichtig, aber nicht fern."
+      fr: "Café du campus. Sofia reste prudente, sans s’éloigner."
+    choices:
+      - code: "joke_whip"
+        requires_item: "whip"
+        heat_points: 1
+        label: {ru: "Смелая шутка про тренировки", en: "Cheeky training joke", es: "Broma atrevida de entrenamiento", de: "Frecher Trainingswitz", fr: "Blague osée d’entraînement"}
+        leads_to: "scene_008_whip"
+      - code: "stay_gentle"
+        label: {ru: "Разговаривать мягко", en: "Stay gentle", es: "Ser amable", de: "Sanft bleiben", fr: "Rester doux"}
+        leads_to: "scene_009"
+
+  - code: "scene_008_whip"
+    image_url: ""
+    energy_cost: 0
+    is_premium: false
+    text:
+      ru: "Она краснеет, но улыбается. Скромность трещит по швам — совсем чуть-чуть."
+      en: "She blushes yet smiles. Modesty cracks—just a little."
+      es: "Se sonroja pero sonríe. La modestia se resquebraja un poco."
+      de: "Sie errötet, lächelt aber. Die Zurückhaltung bröckelt etwas."
+      fr: "Elle rougit mais sourit. Sa pudeur se fissure légèrement."
+    choices:
+      - code: "back_to_9"
+        label: {ru: "Продолжить", en: "Continue", es: "Continuar", de: "Weiter", fr: "Continuer"}
+        leads_to: "scene_009"
+
+  - code: "scene_009"
+    image_url: ""
+    energy_cost: 1
+    is_premium: false
+    text:
+      ru: "Прогулка по кампусу. София рассказывает о себе, осторожно."
+      en: "Walk across campus. Sofia shares a bit, carefully."
+      es: "Paseo por el campus. Sofía se abre un poco, con cuidado."
+      de: "Spaziergang über den Campus. Sofia öffnet sich vorsichtig."
+      fr: "Promenade sur le campus. Sofia se confie un peu, prudemment."
+    choices:
+      - code: "to10"
+        label: {ru: "Дальше", en: "Next", es: "Siguiente", de: "Weiter", fr: "Suite"}
+        leads_to: "scene_010"
+
+  - code: "scene_010"
+    image_url: ""
+    energy_cost: 1
+    is_premium: false
+    text:
+      ru: "Вечереет. Рядом — общежитие."
+      en: "Evening falls. The dorm is nearby."
+      es: "Atardece. El dormitorio está cerca."
+      de: "Es wird Abend. Das Wohnheim ist nah."
+      fr: "Le soir tombe. Le dortoir est proche."
+    choices:
+      - code: "invite_dorm"
+        gem_cost: 20
+        heat_points: 2
+        label: {ru: "Предложить зайти (20💎)", en: "Invite her in (20💎)", es: "Invitarla a pasar (20💎)", de: "Einladen reinzukommen (20💎)", fr: "L’inviter à entrer (20💎)"}
+        leads_to: "scene_010_peek"
+      - code: "be_patient"
+        label: {ru: "Не торопить", en: "Don’t rush", es: "No apresurar", de: "Nicht drängen", fr: "Ne pas presser"}
+        leads_to: "scene_011"
+
+  - code: "scene_010_peek"
+    image_url: ""
+    energy_cost: 0
+    is_premium: false
+    text:
+      ru: "София смущается, но делает шаг навстречу. Граница сдвигается."
+      en: "She blushes yet leans in. A boundary shifts."
+      es: "Se sonroja, pero se acerca. Un límite se mueve."
+      de: "Sie errötet, kommt aber näher. Eine Grenze verschiebt sich."
+      fr: "Elle rougit mais se penche. Une limite bouge."
+    choices:
+      - code: "to11"
+        label: {ru: "Дальше", en: "Next", es: "Siguiente", de: "Weiter", fr: "Suite"}
+        leads_to: "scene_011"
+
+  - code: "scene_011"
+    image_url: ""
+    energy_cost: 1
+    is_premium: false
+    text:
+      ru: "Сообщение от подруги. София колеблется — прощаться или продолжить вечер."
+      en: "Text from a friend. Sofia hesitates—call it a night or continue."
+      es: "Mensaje de una amiga. Sofía duda: terminar o seguir."
+      de: "Nachricht von einer Freundin. Sofia zögert: Schluss machen oder weiter."
+      fr: "Message d’une amie. Sofia hésite : s’arrêter ou continuer."
+    choices:
+      - code: "to12"
+        label: {ru: "Пойти к общаге", en: "Head to dorm", es: "Ir al dormitorio", de: "Zum Wohnheim", fr: "Aller au dortoir"}
+        leads_to: "scene_012"
+
+  - code: "scene_012"
+    image_url: ""
+    energy_cost: 1
+    is_premium: false
+    text:
+      ru: "У входа в общагу. Тишина, только ваши шаги."
+      en: "At the dorm entrance. Quiet; just your footsteps."
+      es: "En la entrada del dormitorio. Silencio; vuestros pasos."
+      de: "Am Wohnheimeingang. Still; nur eure Schritte."
+      fr: "À l’entrée du dortoir. Silence ; vos pas."
+    choices:
+      - code: "step_closer"
+        gem_cost: 15
+        heat_points: 1
+        label: {ru: "Шаг ближе (15💎)", en: "Step closer (15💎)", es: "Acércate (15💎)", de: "Näher treten (15💎)", fr: "Se rapprocher (15💎)"}
+        leads_to: "scene_012_peek"
+      - code: "hold"
+        label: {ru: "Пока не спешить", en: "Not yet", es: "Aún no", de: "Noch nicht", fr: "Pas encore"}
+        leads_to: "scene_013"
+
+  - code: "scene_012_peek"
+    image_url: ""
+    energy_cost: 0
+    is_premium: false
+    text:
+      ru: "Она не уходит. В её скромности проступает доверие."
+      en: "She doesn’t step away. Trust peeks through modesty."
+      es: "No se aparta. La confianza asoma entre su modestia."
+      de: "Sie weicht nicht zurück. Vertrauen blitzt durch die Schüchternheit."
+      fr: "Elle ne recule pas. La confiance transparaît."
+    choices:
+      - code: "to13"
+        label: {ru: "Дальше", en: "Next", es: "Siguiente", de: "Weiter", fr: "Suite"}
+        leads_to: "scene_013"
+
+  - code: "scene_013"
+    image_url: ""
+    energy_cost: 1
+    is_premium: false
+    text:
+      ru: "Холл. Взгляд в глаза задерживается дольше обычного."
+      en: "Dorm lobby. Eye contact lingers longer than usual."
+      es: "Vestíbulo. La mirada dura más de lo normal."
+      de: "Foyer. Der Blickkontakt hält länger."
+      fr: "Hall. Le regard dure plus longtemps que d’habitude."
+    choices:
+      - code: "to14"
+        label: {ru: "Ещё чуть-чуть ближе", en: "A little closer", es: "Un poco más cerca", de: "Noch näher", fr: "Un peu plus près"}
+        leads_to: "scene_014"
+
+  - code: "scene_014"
+    image_url: ""
+    energy_cost: 1
+    is_premium: false
+    text:
+      ru: "София смущённо улыбается: «Может, ещё увидимся…»"
+      en: "Sofia smiles, shy: “Maybe we’ll meet again…”"
+      es: "Sofía sonríe, tímida: “Quizá nos veamos…”"
+      de: "Sofia lächelt schüchtern: „Vielleicht sehen wir uns…“"
+      fr: "Sofia sourit, pudique : « On se reverra peut-être… »"
+    choices:
+      - code: "to15"
+        label: {ru: "Финал", en: "Ending", es: "Final", de: "Finale", fr: "Final"}
+        leads_to: "scene_015"
+
+  - code: "scene_015"
+    image_url: ""
+    energy_cost: 0
+    is_premium: false
+    text:
+      ru: "Итог вечера зависит от того, насколько ты растопил её скромность."
+      en: "The night’s outcome depends on how much you melted her reserve."
+      es: "El final depende de cuánto ablandaste su modestia."
+      de: "Der Ausgang hängt davon ab, wie sehr du ihre Zurückhaltung gelöst hast."
+      fr: "L’issue dépend de combien tu as adouci sa réserve."
+    choices:
+      - code: "ending_router"
+        label: {ru: "Показать развязку", en: "Show ending", es: "Mostrar desenlace", de: "Ende anzeigen", fr: "Afficher la fin"}
+        leads_to: null
+
+  - code: "ending_soft"
+    ending_type: "free"
+    heat_level: 0
+    image_url: ""
+    energy_cost: 0
+    is_premium: false
+    text:
+      ru: "Скромное прощание и договорённость увидеться завтра."
+      en: "A modest goodbye and plans to meet tomorrow."
+      es: "Una despedida modesta y planes para mañana."
+      de: "Ein bescheidenes Lebewohl und ein Plan für morgen."
+      fr: "Un adieu pudique et rendez-vous demain."
+    choices: []
+
+  - code: "ending_hot"
+    ending_type: "free"
+    heat_level: 1
+    image_url: ""
+    energy_cost: 0
+    is_premium: false
+    text:
+      ru: "Горячее прощание: её скромность уступает на миг — только для тебя."
+      en: "A hot goodbye: her modesty yields for a moment—just for you."
+      es: "Un adiós ardiente: su modestia cede un instante—solo para ti."
+      de: "Heißer Abschied: Ihre Zurückhaltung weicht kurz—für dich."
+      fr: "Un adieu brûlant : sa pudeur cède un instant—pour toi."
+    choices: []
+
+  - code: "ending_max"
+    ending_type: "free"
+    heat_level: 2
+    image_url: ""
+    energy_cost: 0
+    is_premium: false
+    text:
+      ru: "Максимально горячая развязка: она пускает тебя ближе, чем ожидал."
+      en: "Maximum-heat ending: she lets you closer than expected."
+      es: "Desenlace al máximo: te deja acercarte más de lo esperado."
+      de: "Maximales Finale: Sie lässt dich näher, als gedacht."
+      fr: "Finale au maximum : elle te laisse t’approcher plus que prévu."
+    choices: []
+
+  - code: "P1"
+    image_url: ""
+    energy_cost: 1
+    is_premium: true
+    text:
+      ru: "Душевые. София смущена, но остаётся. Её взгляд просит такта."
+      en: "Showers. Sofia is shy but stays. Her eyes ask for tact."
+      es: "Duchas. Sofía es tímida pero se queda. Sus ojos piden tacto."
+      de: "Duschen. Sofia ist schüchtern, bleibt aber. Ihr Blick bittet um Takt."
+      fr: "Douches. Sofia est pudique mais reste. Son regard demande du tact."
+    choices:
+      - code: "toP2"
+        label: {ru: "Дальше", en: "Next", es: "Siguiente", de: "Weiter", fr: "Suite"}
+        leads_to: "P2"
+
+  - code: "P2"
+    image_url: ""
+    energy_cost: 1
+    is_premium: true
+    text:
+      ru: "Полотенце соскальзывает — она краснеет ещё сильнее, но не отстраняется."
+      en: "Towel slips—she blushes harder, yet doesn’t pull away."
+      es: "La toalla resbala—se sonroja más, pero no se aparta."
+      de: "Das Handtuch rutscht—sie errötet stärker, geht aber nicht weg."
+      fr: "La serviette glisse—elle rougit davantage, sans reculer."
+    choices:
+      - code: "toP3"
+        label: {ru: "Дальше", en: "Next", es: "Siguiente", de: "Weiter", fr: "Suite"}
+        leads_to: "P3"
+
+  - code: "P3"
+    image_url: ""
+    energy_cost: 1
+    is_premium: true
+    text:
+      ru: "Пустой зал. София впервые делает шаг навстречу — тихо просит не спешить."
+      en: "Empty hall. For the first time, she steps closer—softly asking not to rush."
+      es: "Sala vacía. Por primera vez, se acerca—pide no apresurarse."
+      de: "Leere Halle. Zum ersten Mal kommt sie näher—„nicht eilen“."
+      fr: "Salle vide. Pour la première fois, elle s’approche—« n’allons pas trop vite »."
+    choices:
+      - code: "toP4"
+        label: {ru: "Дальше", en: "Next", es: "Siguiente", de: "Weiter", fr: "Suite"}
+        leads_to: "P4"
+
+  - code: "P4"
+    image_url: ""
+    energy_cost: 1
+    is_premium: true
+    text:
+      ru: "Её скромность уступает только тебе — сцена развивается откровенно."
+      en: "Her modesty yields only to you—scene turns explicit."
+      es: "Su modestia cede solo ante ti—la escena se vuelve explícita."
+      de: "Ihre Zurückhaltung weicht nur dir—Szene wird explizit."
+      fr: "Sa pudeur cède pour toi—la scène devient explicite."
+    choices:
+      - code: "P_final_A"
+        label: {ru: "Финал A", en: "Final A", es: "Final A", de: "Finale A", fr: "Final A"}
+        leads_to: "P_FINAL_A"
+      - code: "P_final_B"
+        label: {ru: "Финал B", en: "Final B", es: "Final B", de: "Finale B", fr: "Final B"}
+        leads_to: "P_FINAL_B"
+
+  - code: "P_FINAL_A"
+    image_url: ""
+    energy_cost: 0
+    is_premium: true
+    text:
+      ru: "Премиум-финал A: она раскрывается полностью."
+      en: "Premium ending A: she opens up completely."
+      es: "Final Premium A: ella se entrega por completo."
+      de: "Premium-Finale A: Sie öffnet sich völlig."
+      fr: "Final Premium A : elle se livre entièrement."
+    choices: []
+
+  - code: "P_FINAL_B"
+    image_url: ""
+    energy_cost: 0
+    is_premium: true
+    text:
+      ru: "Премиум-финал B: вы даёте друг другу максимум близости."
+      en: "Premium ending B: you share maximum intimacy."
+      es: "Final Premium B: máxima intimidad entre ambos."
+      de: "Premium-Finale B: maximale Nähe zwischen euch."
+      fr: "Final Premium B : intimité maximale à deux."
+    choices: []
+

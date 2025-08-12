@@ -1,0 +1,10 @@
+﻿aiogram==3.13.1
+fastapi==0.111.0
+uvicorn[standard]==0.30.0
+SQLAlchemy>=2.0.31,<3.0.0
+psycopg[binary]>=3.2.2,<4.0.0
+greenlet>=3.0.3,<4.0.0
+python-dotenv==1.0.1
+pydantic==2.7.1
+httpx==0.27.0
+PyYAML==6.0.1
