@@ -11,6 +11,13 @@ _env_url = os.getenv("DATABASE_URL", _DEFAULT_URL)
 if "+asyncpg" in _env_url:
     _env_url = _env_url.replace("+asyncpg", "+psycopg")
 
+# Windows: psycopg async requires selector event loop
+try:
+    if platform.system() == "Windows":
+        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+except Exception:
+    pass
+
 engine = create_async_engine(_env_url, echo=False, future=True)
 AsyncSessionLocal = async_sessionmaker(engine, expire_on_commit=False, class_=AsyncSession)
 Base = declarative_base()

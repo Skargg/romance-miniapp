@@ -106,3 +106,18 @@ class RefPayout(Base):
     amount_cents: Mapped[int] = mapped_column(Integer, default=0)
     reason: Mapped[str] = mapped_column(String(64), default="purchase")
     created_at: Mapped[str] = mapped_column(String(32))
+
+# Согласие 18+
+class AgeConsent(Base):
+    __tablename__ = "age_consent"
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), primary_key=True)
+    confirmed_at: Mapped[str] = mapped_column(String(32))
+
+# Инвентарь пользователя (по истории)
+class UserItem(Base):
+    __tablename__ = "user_items"
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"))
+    story_id: Mapped[int] = mapped_column(ForeignKey("stories.id", ondelete="CASCADE"))
+    item_code: Mapped[str] = mapped_column(String(100))
+    __table_args__ = (UniqueConstraint("user_id", "story_id", "item_code", name="uq_user_item"),)
