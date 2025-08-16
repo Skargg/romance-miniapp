@@ -1,0 +1,1723 @@
+id: 00000000-0000-0000-0000-000000000801
+code: campus_arc1_v7
+start_scene: scene_001
+items:
+- code: item_flowers
+  price_gems: 8
+  name:
+    ru: Букет цветов
+    en: Bouquet of flowers
+    es: Ramo de flores
+    de: Blumenstrauß
+    fr: Bouquet de fleurs
+  desc:
+    ru: Поднимает настроение на свидании.
+    en: Lifts the mood on a date.
+    es: Mejora el ánimo en una cita.
+    de: Hebt die Stimmung beim Date.
+    fr: Met de l’ambiance au rendez‑vous.
+- code: item_chocolate
+  price_gems: 6
+  name:
+    ru: Шоколад
+    en: Chocolate
+    es: Chocolate
+    de: Schokolade
+    fr: Chocolat
+  desc:
+    ru: Сладкий бонус, который ценят обе.
+    en: A sweet bonus both appreciate.
+    es: Dulce detalle que ambas aprecian.
+    de: Süßer Bonus, den beide mögen.
+    fr: Un doux atout apprécié des deux.
+- code: item_perfume
+  price_gems: 12
+  name:
+    ru: Мини‑парфюм
+    en: Mini perfume
+    es: Mini perfume
+    de: Mini‑Parfüm
+    fr: Mini parfum
+  desc:
+    ru: Элегантный штрих, усиливает впечатление.
+    en: Elegant touch; boosts impression.
+    es: Toque elegante; mejora impresión.
+    de: Elegante Note; verstärkt Eindruck.
+    fr: Touche élégant ; renforce l’impression.
+- code: item_towel
+  price_gems: 5
+  name:
+    ru: Мягкое полотенце
+    en: Soft towel
+    es: Toalla suave
+    de: Weiches Handtuch
+    fr: Serviette douce
+  desc:
+    ru: Кстати после душа или тренировки.
+    en: Handy after shower or training.
+    es: Útil tras la ducha o el entrenamiento.
+    de: Praktisch nach Dusche oder Training.
+    fr: Utile après la douche ou l’entraînement.
+- code: item_tshirt
+  price_gems: 7
+  name:
+    ru: Чистая футболка
+    en: Clean T‑shirt
+    es: Camiseta limpia
+    de: Sauberes T‑Shirt
+    fr: T‑shirt propre
+  desc:
+    ru: Выручит, если чья-то одежда намокла.
+    en: Helps if someone’s shirt got wet.
+    es: Útil si a alguien se le mojó la ropa.
+    de: Hilft bei nassem Shirt.
+    fr: Pratique si un vêtement est mouillé.
+- code: item_hairclip
+  price_gems: 4
+  name:
+    ru: Заколка для волос
+    en: Hair clip
+    es: Horquilla
+    de: Haarclip
+    fr: Barrette
+  desc:
+    ru: Милый знак внимания.
+    en: A cute token of attention.
+    es: Un detalle bonito.
+    de: Nettes kleines Zeichen.
+    fr: Petit signe d’attention.
+- code: item_vip_pass
+  price_gems: 15
+  name:
+    ru: VIP‑браслет
+    en: VIP wristband
+    es: Pulsera VIP
+    de: VIP‑Armband
+    fr: Bracelet VIP
+  desc:
+    ru: Откроет двери в клубе.
+    en: Opens doors at the club.
+    es: Abre puertas en el club.
+    de: Öffnet Türen im Club.
+    fr: Ouvre des portes au club.
+- code: item_musicgift
+  price_gems: 6
+  name:
+    ru: Плейлист‑подарок
+    en: Music gift playlist
+    es: Lista musical de regalo
+    de: Musik‑Geschenk‑Playlist
+    fr: Playlist cadeau
+  desc:
+    ru: Персональный плейлист — +симпатия.
+    en: Personal playlist—bonus affinity.
+    es: Playlist personal—más afinidad.
+    de: Persönliche Playlist—mehr Sympathie.
+    fr: Playlist perso—affinité +.
+scenes:
+- code: scene_001
+  image_url: /content/stories/campus_arc1_v7/images/scene_001.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Ты у дверей женской раздевалки. (Все 18+) Что сделаешь?
+    en: You’re at the girls’ locker room door. (All 18+) What do you do?
+    es: Estás ante el vestuario de chicas. (Todos 18+) ¿Qué haces?
+    de: Du stehst vor der Mädchenumkleide. (Alle 18+) Was tust du?
+    fr: Tu es devant le vestiaire des filles. (Tous 18+) Que fais‑tu ?
+  choices:
+  - code: enter_now
+    label:
+      ru: Войти тихо
+      en: Enter quietly
+      es: Entrar en silencio
+      de: Leise eintreten
+      fr: Entrer discrètement
+    leads_to: scene_002
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+  - code: knock_first
+    label:
+      ru: Постучать
+      en: Knock
+      es: Llamar
+      de: Klopfen
+      fr: Frapper
+    leads_to: scene_003
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+  - code: open_shop
+    label:
+      ru: 🛍 Магазин
+      en: 🛍 Shop
+      es: 🛍 Tienda
+      de: 🛍 Shop
+      fr: 🛍 Boutique
+    leads_to: scene_shop
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_002
+  image_url: /content/stories/campus_arc1_v7/images/scene_002.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: Ты входишь. Вика и Алина переодеваются и удивлённо смотрят на тебя.
+    en: You step in. Vika and Alina are changing and look at you, surprised.
+    es: Entras. Vika y Alina se están cambiando y te miran sorprendidas.
+    de: Du trittst ein. Vika und Alina ziehen sich um und schauen überrascht.
+    fr: Tu entres. Vika et Alina se changent et te regardent, surprises.
+  choices:
+  - code: apologize_leave
+    label:
+      ru: Извиниться и выйти
+      en: Apologize and leave
+      es: Disculparte y salir
+      de: Entschuldigen und gehen
+      fr: S’excuser et sortir
+    leads_to: scene_004
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+  - code: bold_joke
+    label:
+      ru: Смело пошутить
+      en: Make a bold joke
+      es: Hacer una broma atrevida
+      de: Kühn scherzen
+      fr: Faire une blague osée
+    leads_to: scene_005
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+  - code: peek_paid
+    label:
+      ru: 💎 Остаться и оглядеться (6)
+      en: 💎 Stay and look around (6)
+      es: 💎 Quedarte y mirar (6)
+      de: 💎 Bleiben und umsehen (6)
+      fr: 💎 Rester et observer (6)
+    leads_to: scene_006
+    gem_cost: 6
+    heat_points: 2
+    is_premium: false
+- code: scene_003
+  image_url: /content/stories/campus_arc1_v7/images/scene_003.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: Ты стучишь. Алина приоткрывает дверь и оценивает тебя взглядом.
+    en: You knock. Alina opens slightly and sizes you up.
+    es: Llamas. Alina abre un poco y te evalúa.
+    de: Du klopfst. Alina öffnet leicht und mustert dich.
+    fr: Tu frappes. Alina entrouvre et te jauge.
+  choices:
+  - code: say_mistake
+    label:
+      ru: Сказать, что перепутал
+      en: Say it was a mistake
+      es: Decir que fue un error
+      de: Sagen, es war ein Versehen
+      fr: Dire que c’était une erreur
+    leads_to: scene_004
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+  - code: ask_step_in
+    label:
+      ru: Попросить на секунду войти
+      en: Ask to step in briefly
+      es: Pedir entrar un segundo
+      de: Kurz hineingehen?
+      fr: Entrer un instant ?
+    leads_to: scene_005
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+- code: scene_004
+  image_url: /content/stories/campus_arc1_v7/images/scene_004.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Коридор спорткомплекса. Преподаватель кивает в сторону зала.
+    en: Gym corridor. The coach nods toward the court.
+    es: Pasillo del gimnasio. El profesor asiente hacia la cancha.
+    de: Flur der Halle. Der Trainer nickt zur Halle.
+    fr: Couloir du gymnase. Le coach hoche la tête vers la salle.
+  choices:
+  - code: go_gym
+    label:
+      ru: Идти в зал
+      en: Go to the gym
+      es: Ir al gimnasio
+      de: In die Halle gehen
+      fr: Aller au gymnase
+    leads_to: scene_006
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_005
+  image_url: /content/stories/campus_arc1_v7/images/scene_005.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Шутка снимает напряжение. Вика краснеет, Алина подмигивает.
+    en: Your joke eases tension. Vika blushes; Alina winks.
+    es: La broma relaja el ambiente. Vika se sonroja; Alina guiña.
+    de: Der Witz entspannt. Vika errötet; Alina zwinkert.
+    fr: La blague détend. Vika rougit ; Alina te fait un clin d’œil.
+  choices:
+  - code: to_gym
+    label:
+      ru: Идти в зал
+      en: Head to the gym
+      es: Ir al gimnasio
+      de: Zur Halle
+      fr: Aller au gymnase
+    leads_to: scene_006
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_006
+  image_url: /content/stories/campus_arc1_v7/images/scene_006.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: Разминка. С кем работать в паре?
+    en: Warm‑up. Who do you pair with?
+    es: Calentamiento. ¿Con quién haces pareja?
+    de: Aufwärmen. Mit wem bildest du ein Paar?
+    fr: Échauffement. Avec qui te mets‑tu en binôme ?
+  choices:
+  - code: with_vika
+    label:
+      ru: С Викой
+      en: With Vika
+      es: Con Vika
+      de: Mit Vika
+      fr: Avec Vika
+    leads_to: scene_007
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+  - code: with_alina
+    label:
+      ru: С Алиной
+      en: With Alina
+      es: Con Alina
+      de: Mit Alina
+      fr: Avec Alina
+    leads_to: scene_008
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_007
+  image_url: /content/stories/campus_arc1_v7/images/scene_007.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: С Викой аккуратно. Бутылка воды опрокидывается — её футболка темнеет от влаги.
+    en: Careful with Vika. A bottle tips—her shirt darkens with water.
+    es: Con Vika con cuidado. Se cae una botella—su camiseta se oscurece.
+    de: Mit Vika vorsichtig. Eine Flasche kippt—ihr Shirt wird nass.
+    fr: Avec Vika prudemment. Une bouteille tombe—son T‑shirt se mouille.
+  choices:
+  - code: offer_tshirt
+    label:
+      ru: Дать свою футболку
+      en: Offer your T‑shirt
+      es: Dar tu camiseta
+      de: Dein T‑Shirt anbieten
+      fr: Donner ton T‑shirt
+    leads_to: scene_009
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+    requires_item: item_tshirt
+  - code: light_joke
+    label:
+      ru: Осторожно пошутить
+      en: Make a light joke
+      es: Broma suave
+      de: Leicht scherzen
+      fr: Petite blague
+    leads_to: scene_009
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_008
+  image_url: /content/stories/campus_arc1_v7/images/scene_008.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: Алина задаёт темп, легко флиртуя и проверяя твою реакцию.
+    en: Alina sets the pace, lightly flirting and testing your reaction.
+    es: Alina marca el ritmo, flirteando y probando tu reacción.
+    de: Alina gibt das Tempo vor, flirtet leicht und testet deine Reaktion.
+    fr: Alina mène la cadence, flirte légèrement et teste ta réaction.
+  choices:
+  - code: flirt_back
+    label:
+      ru: Поддержать флирт
+      en: Flirt back
+      es: Devolver el flirteo
+      de: Zurückflirten
+      fr: Rendre le flirt
+    leads_to: scene_009
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+  - code: stay_neutral
+    label:
+      ru: Сдержанно вести себя
+      en: Keep it neutral
+      es: Mantener neutral
+      de: Neutral bleiben
+      fr: Rester neutre
+    leads_to: scene_009
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_009
+  image_url: /content/stories/campus_arc1_v7/images/scene_009.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: Мини‑матч. Столкновение — на тебя падает одна из девушек, смех, искра.
+    en: Quick match. A stumble—one girl falls on you; laughter; a spark.
+    es: Partido rápido. Un tropiezo—una chica cae sobre ti; risas; chispa.
+    de: Kurzes Match. Ein Stolpern—eine fällt auf dich; Lachen; Funke.
+    fr: Mini‑match. Un faux pas—l’une tombe sur toi ; rires ; étincelle.
+  choices:
+  - code: vika_fell
+    label:
+      ru: Это Вика
+      en: It’s Vika
+      es: Es Vika
+      de: Es ist Vika
+      fr: C’est Vika
+    leads_to: scene_010
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+  - code: alina_fell
+    label:
+      ru: Это Алина
+      en: It’s Alina
+      es: Es Alina
+      de: Es ist Alina
+      fr: C’est Alina
+    leads_to: scene_011
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+- code: scene_010
+  image_url: /content/stories/campus_arc1_v7/images/scene_010.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: Вика остаётся близко, ловит твой взгляд и смущённо отводит глаза.
+    en: Vika stays close, meets your gaze and looks away shyly.
+    es: Vika se queda cerca, cruza miradas y aparta la vista tímida.
+    de: Vika bleibt nah, trifft deinen Blick und schaut schüchtern weg.
+    fr: Vika reste près, croise ton regard puis détourne les yeux.
+  choices:
+  - code: warm_joke
+    label:
+      ru: Тёпло пошутить
+      en: Make a warm joke
+      es: Broma cálida
+      de: Warm witzeln
+      fr: Faire une blague douce
+    leads_to: scene_012
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+  - code: help_up
+    label:
+      ru: Поднять её серьёзно
+      en: Help her up seriously
+      es: Ayudarla con seriedad
+      de: Ernsthaft aufhelfen
+      fr: L’aider sérieusement à se relever
+    leads_to: scene_012
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_011
+  image_url: /content/stories/campus_arc1_v7/images/scene_011.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: Алина задерживается дольше, чем нужно, улыбается и не спешит отстраняться.
+    en: Alina lingers longer than needed, smiling and not rushing away.
+    es: Alina se queda más de lo necesario, sonriente y sin apartarse.
+    de: Alina verweilt länger als nötig, lächelt und rückt nicht weg.
+    fr: Alina reste plus que nécessaire, souriante sans s’éloigner.
+  choices:
+  - code: tease_back
+    label:
+      ru: Поддразнить в ответ
+      en: Tease back
+      es: Responder con broma
+      de: Zurücknecken
+      fr: Taquiner en retour
+    leads_to: scene_012
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+  - code: be_gentle
+    label:
+      ru: Осторожно отступить
+      en: Gently step back
+      es: Retroceder con suavidad
+      de: Sanft zurückweichen
+      fr: Se reculer doucement
+    leads_to: scene_012
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_012
+  image_url: /content/stories/campus_arc1_v7/images/scene_012.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: После игры девушки шутливо зовут к душевым. Пар, эхо, зеркала.
+    en: After the game they teasingly invite you to the showers. Steam, echoes, mirrors.
+    es: Tras el partido te invitan a las duchas en tono de broma. Vapor, eco, espejos.
+    de: Nach dem Spiel laden sie scherzhaft zu den Duschen ein. Dampf, Echo, Spiegel.
+    fr: Après le match elles t’invitent aux douches en plaisantant. Vapeur, écho, miroirs.
+  choices:
+  - code: leave_tactfully
+    label:
+      ru: Тактично уйти
+      en: Leave tactfully
+      es: Irte con tacto
+      de: Taktvoll gehen
+      fr: Partir avec tact
+    leads_to: scene_013
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+  - code: stay_longer_paid
+    label:
+      ru: 💎 Остаться подольше (8)
+      en: 💎 Stay a bit longer (8)
+      es: 💎 Quedarte un poco más (8)
+      de: 💎 Länger bleiben (8)
+      fr: 💎 Rester un peu plus (8)
+    leads_to: scene_014
+    gem_cost: 8
+    heat_points: 1
+    is_premium: false
+  - code: compliment_paid
+    label:
+      ru: 💎 Комплимент Вике или Алине (6)
+      en: 💎 Compliment Vika or Alina (6)
+      es: 💎 Elogiar a Vika o Alina (6)
+      de: 💎 Kompliment an Vika/Alina (6)
+      fr: 💎 Complimenter Vika/Alina (6)
+    leads_to: scene_015
+    gem_cost: 6
+    heat_points: 1
+    is_premium: false
+- code: scene_013
+  image_url: /content/stories/campus_arc1_v7/images/scene_013.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Ты даёшь им пространство. Краем глаза ловишь добрый взгляд.
+    en: You give them space. You catch a kind glance from the corner of your eye.
+    es: Les das espacio. Cazas una mirada amable de reojo.
+    de: Du gibst ihnen Raum. Aus dem Augenwinkel ein freundlicher Blick.
+    fr: Tu laisses de l’espace. Du coin de l’œil, un regard bienveillant.
+  choices:
+  - code: to_evening
+    label:
+      ru: К вечеру
+      en: To the evening
+      es: Hacia la noche
+      de: Zum Abend
+      fr: Vers le soir
+    leads_to: scene_019
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_014
+  image_url: /content/stories/campus_arc1_v7/images/scene_014.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: Ты задерживаешься у входа. В паре видны силуэты, слышен смех.
+    en: You linger by the entrance. Through steam—silhouettes and soft laughter.
+    es: Te quedas en la entrada. Entre el vapor—siluetas y risas suaves.
+    de: Du verweilst am Eingang. Durch den Dampf—Silhouetten, leises Lachen.
+    fr: Tu restes à l’entrée. À travers la vapeur—silhouettes et rires.
+  choices:
+  - code: approach_vika_paid
+    label:
+      ru: 💎 Подойти к Вике (10)
+      en: 💎 Step to Vika (10)
+      es: 💎 Acercarte a Vika (10)
+      de: 💎 Zu Vika gehen (10)
+      fr: 💎 Aller vers Vika (10)
+    leads_to: scene_016
+    gem_cost: 10
+    heat_points: 1
+    is_premium: false
+  - code: approach_alina_paid
+    label:
+      ru: 💎 Подойти к Алине (10)
+      en: 💎 Step to Alina (10)
+      es: 💎 Acercarte a Alina (10)
+      de: 💎 Zu Alina gehen (10)
+      fr: 💎 Aller vers Alina (10)
+    leads_to: scene_017
+    gem_cost: 10
+    heat_points: 1
+    is_premium: false
+  - code: stay_edge
+    label:
+      ru: Остаться на краю
+      en: Stay at the edge
+      es: Quedarte al borde
+      de: Am Rand bleiben
+      fr: Rester au bord
+    leads_to: scene_018
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_015
+  image_url: /content/stories/campus_arc1_v7/images/scene_015.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Сказанное тобой звучит искренне. Улыбки становятся теплее.
+    en: What you said sounds sincere. Smiles grow warmer.
+    es: Lo que dijiste suena sincero. Las sonrisas se calientan.
+    de: Es klingt aufrichtig. Die Lächeln werden wärmer.
+    fr: Tes mots sonnent sincères. Les sourires se font plus chaleureux.
+  choices:
+  - code: to_evening2
+    label:
+      ru: К вечеру
+      en: To the evening
+      es: A la noche
+      de: Zum Abend
+      fr: Vers le soir
+    leads_to: scene_019
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+- code: scene_016
+  image_url: /content/stories/campus_arc1_v7/images/scene_016.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: Ты оказываешься ближе к Вике. Она вздрагивает, но не отходит.
+    en: You get closer to Vika. She flinches slightly but doesn’t step away.
+    es: Te acercas a Vika. Se estremece pero no se aparta.
+    de: Du kommst Vika näher. Sie zuckt, weicht aber nicht zurück.
+    fr: Tu te rapproches de Vika. Elle tressaille, mais ne recule pas.
+  choices:
+  - code: brush_hand_paid
+    label:
+      ru: 💎 Легко коснуться руки (8)
+      en: 💎 Lightly touch her hand (8)
+      es: 💎 Tocar su mano (8)
+      de: 💎 Ihre Hand berühren (8)
+      fr: 💎 Effleurer sa main (8)
+    leads_to: scene_018
+    gem_cost: 8
+    heat_points: 1
+    is_premium: false
+  - code: offer_towel
+    label:
+      ru: Подать полотенце
+      en: Offer a towel
+      es: Dar una toalla
+      de: Ein Handtuch reichen
+      fr: Tendre une serviette
+    leads_to: scene_018
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+    requires_item: item_towel
+- code: scene_017
+  image_url: /content/stories/campus_arc1_v7/images/scene_017.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: Ты подходишь к Алине. Её взгляд прямой, чуть игривый.
+    en: You step to Alina. Her gaze is direct, slightly playful.
+    es: Te acercas a Alina. Su mirada es directa, algo juguetona.
+    de: Du trittst zu Alina. Ihr Blick ist direkt, etwas verspielt.
+    fr: Tu t’approches d’Alina. Son regard est direct, un peu joueur.
+  choices:
+  - code: help_back_paid
+    label:
+      ru: 💎 Помочь намылить спину (12)
+      en: 💎 Help soap her back (12)
+      es: 💎 Enjabonar la espalda (12)
+      de: 💎 Rücken einseifen (12)
+      fr: 💎 Savonner le dos (12)
+    leads_to: scene_018
+    gem_cost: 12
+    heat_points: 2
+    is_premium: false
+  - code: give_hairclip
+    label:
+      ru: Подарить заколку
+      en: Give the hair clip
+      es: Regalar horquilla
+      de: Haarclip schenken
+      fr: Offrir la barrette
+    leads_to: scene_018
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+    requires_item: item_hairclip
+- code: scene_018
+  image_url: /content/stories/campus_arc1_v7/images/scene_018.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Пар рассеивается. Обмениваетесь короткими взглядами. Что дальше — решит вечер.
+    en: The steam thins. You exchange brief glances. The evening will decide what’s next.
+    es: El vapor se disipa. Intercambiáis miradas. La noche decidirá lo siguiente.
+    de: Der Dampf lichtet sich. Ihr tauscht Blicke. Der Abend entscheidet weiter.
+    fr: La vapeur retombe. Vous échangez des regards. La soirée décidera de la suite.
+  choices:
+  - code: to_evening3
+    label:
+      ru: К вечеру
+      en: To the evening
+      es: A la noche
+      de: Zum Abend
+      fr: Vers le soir
+    leads_to: scene_019
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_019
+  image_url: /content/stories/campus_arc1_v7/images/scene_019.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: 'Вечер: кафе с Алиной или вечеринка с Викой. Можно рискнуть успеть везде.'
+    en: 'Evening: café with Alina or a party with Vika. You could try both.'
+    es: 'Noche: café con Alina o fiesta con Vika. Podrías intentar ambas.'
+    de: 'Abend: Café mit Alina oder Party mit Vika. Du könntest beides versuchen.'
+    fr: 'Soirée : café avec Alina ou fête avec Vika. Tu peux tenter les deux.'
+  choices:
+  - code: go_cafe
+    label:
+      ru: Пойти в кафе (Алина)
+      en: Go to café (Alina)
+      es: Ir al café (Alina)
+      de: Ins Café (Alina)
+      fr: Aller au café (Alina)
+    leads_to: scene_020
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+  - code: go_party
+    label:
+      ru: Пойти на вечеринку (Вика)
+      en: Go to party (Vika)
+      es: Ir a la fiesta (Vika)
+      de: Zur Party (Vika)
+      fr: Aller à la soirée (Vika)
+    leads_to: scene_024
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+  - code: try_both
+    label:
+      ru: Попробовать обе опции
+      en: Try to do both
+      es: Intentar ambas
+      de: Beides versuchen
+      fr: Tenter les deux
+    leads_to: scene_028
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+  - code: open_shop2
+    label:
+      ru: 🛍 Заглянуть в магазин
+      en: 🛍 Open the shop
+      es: 🛍 Abrir la tienda
+      de: 🛍 Shop öffnen
+      fr: 🛍 Ouvrir la boutique
+    leads_to: scene_shop
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_020
+  image_url: /content/stories/campus_arc1_v7/images/scene_020.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: Уютное кафе. Тёплый свет и спокойная музыка. Алина слушает внимательно.
+    en: Cozy café. Warm lights and calm music. Alina listens closely.
+    es: Café acogedor. Luces cálidas y música tranquila. Alina escucha atenta.
+    de: Gemütliches Café. Warmes Licht und ruhige Musik. Alina hört aufmerksam zu.
+    fr: Café cosy. Lumière chaude et musique douce. Alina t’écoute attentivement.
+  choices:
+  - code: share_personal
+    label:
+      ru: Поделиться личным
+      en: Share something personal
+      es: Compartir algo personal
+      de: Etwas Persönliches teilen
+      fr: Partager quelque chose de personnel
+    leads_to: scene_021
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+  - code: keep_light
+    label:
+      ru: Держать разговор лёгким
+      en: Keep it light
+      es: Mantener ligero
+      de: Locker bleiben
+      fr: Rester léger
+    leads_to: scene_021
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_021
+  image_url: /content/stories/campus_arc1_v7/images/scene_021.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Официант предлагает десерт и небольшой букет у стойки.
+    en: The waiter suggests a dessert and a small bouquet at the counter.
+    es: El camarero sugiere un postre y un pequeño ramo.
+    de: Der Kellner empfiehlt Dessert und einen kleinen Strauß.
+    fr: Le serveur propose un dessert et un petit bouquet.
+  choices:
+  - code: talk_free
+    label:
+      ru: Просто поговорить (бесплатно)
+      en: Just talk (free)
+      es: Sólo hablar (gratis)
+      de: Nur reden (gratis)
+      fr: Parler (gratuit)
+    leads_to: scene_022
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+  - code: use_flowers
+    label:
+      ru: Подарить букет (если есть)
+      en: Give bouquet (if owned)
+      es: Dar ramo (si tienes)
+      de: Blumen geben (falls vorhanden)
+      fr: Offrir bouquet (si possédé)
+    leads_to: scene_022
+    gem_cost: 0
+    heat_points: 2
+    is_premium: false
+    requires_item: item_flowers
+  - code: use_choco
+    label:
+      ru: Поделиться шоколадом (если есть)
+      en: Share chocolate (if owned)
+      es: Compartir chocolate (si tienes)
+      de: Schokolade teilen (falls vorhanden)
+      fr: Partager chocolat (si possédé)
+    leads_to: scene_022
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+    requires_item: item_chocolate
+  - code: buy_dessert
+    label:
+      ru: 💎 Заказать десерт (8)
+      en: 💎 Order dessert (8)
+      es: 💎 Pedir postre (8)
+      de: 💎 Dessert bestellen (8)
+      fr: 💎 Prendre un dessert (8)
+    leads_to: scene_022
+    gem_cost: 8
+    heat_points: 1
+    is_premium: false
+- code: scene_022
+  image_url: /content/stories/campus_arc1_v7/images/scene_022.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Алина благодарно улыбается. Пальцы едва касаются, когда ты подаёшь чашку.
+    en: Alina smiles gratefully. Fingers barely touch as you hand the cup.
+    es: Alina sonríe agradecida. Los dedos apenas se rozan al pasar la taza.
+    de: Alina lächelt dankbar. Finger berühren sich kurz beim Reichen der Tasse.
+    fr: Alina sourit avec gratitude. Les doigts se frôlent en tendant la tasse.
+  choices:
+  - code: walk_outside
+    label:
+      ru: Немного пройтись
+      en: Take a short walk
+      es: Dar un paseo
+      de: Kurz spazieren
+      fr: Faire un petit tour
+    leads_to: scene_023
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+  - code: back_to_dorm
+    label:
+      ru: Вернуться в общагу
+      en: Head back to dorm
+      es: Volver a la residencia
+      de: Zurück ins Wohnheim
+      fr: Rentrer au dortoir
+    leads_to: scene_027
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_023
+  image_url: /content/stories/campus_arc1_v7/images/scene_023.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Прохладный воздух. Алина берёт тебя под руку и смеётся шёпотом.
+    en: Cool air. Alina links your arm, laughing softly.
+    es: Aire fresco. Alina te toma del brazo y ríe en voz baja.
+    de: Kühle Luft. Alina hakt sich ein und lacht leise.
+    fr: Air frais. Alina prend ton bras en riant doucement.
+  choices:
+  - code: to_dorm_from_cafe
+    label:
+      ru: В общагу
+      en: To dorm
+      es: Al dormitorio
+      de: Ins Wohnheim
+      fr: Au dortoir
+    leads_to: scene_027
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+- code: scene_024
+  image_url: /content/stories/campus_arc1_v7/images/scene_024.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: Клуб. Музыка, свет. Вика тянет тебя на танцпол ближе, чем обычно.
+    en: Club. Music, lights. Vika pulls you onto the dance floor, closer than usual.
+    es: Club. Música y luces. Vika te lleva a la pista más cerca de lo normal.
+    de: Club. Musik, Lichter. Vika zieht dich näher als gewöhnlich auf die Tanzfläche.
+    fr: Club. Musique et lumières. Vika t’entraîne sur la piste, plus près que d’habitude.
+  choices:
+  - code: dance_close
+    label:
+      ru: Тесно танцевать
+      en: Dance close
+      es: Bailar pegados
+      de: Eng tanzen
+      fr: Danser serrés
+    leads_to: scene_025
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+  - code: keep_distance
+    label:
+      ru: Держать дистанцию
+      en: Keep some distance
+      es: Mantener distancia
+      de: Abstand halten
+      fr: Garder un peu de distance
+    leads_to: scene_025
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_025
+  image_url: /content/stories/campus_arc1_v7/images/scene_025.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Бармен шепчет про фирменный коктейль и VIP‑зону.
+    en: Bartender hints at a signature cocktail and VIP area.
+    es: El barman sugiere un cóctel de la casa y la zona VIP.
+    de: Der Barkeeper deutet Signature‑Cocktail und VIP‑Bereich an.
+    fr: Le barman évoque un cocktail signature et l’espace VIP.
+  choices:
+  - code: stay_floor
+    label:
+      ru: Остаться на танцполе (бесплатно)
+      en: Stay on the floor (free)
+      es: Quedarse en pista (gratis)
+      de: Auf der Fläche bleiben (gratis)
+      fr: Rester en piste (gratuit)
+    leads_to: scene_026
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+  - code: buy_cocktail_paid
+    label:
+      ru: 💎 Купить коктейль (6)
+      en: 💎 Buy cocktail (6)
+      es: 💎 Comprar cóctel (6)
+      de: 💎 Cocktail kaufen (6)
+      fr: 💎 Prendre un cocktail (6)
+    leads_to: scene_026
+    gem_cost: 6
+    heat_points: 1
+    is_premium: false
+  - code: use_vip_pass
+    label:
+      ru: Показать VIP‑браслет (если есть)
+      en: Show VIP wristband (if owned)
+      es: Mostrar pulsera VIP (si tienes)
+      de: VIP‑Armband zeigen (falls vorhanden)
+      fr: Montrer bracelet VIP (si possédé)
+    leads_to: scene_026
+    gem_cost: 0
+    heat_points: 2
+    is_premium: false
+    requires_item: item_vip_pass
+- code: scene_026
+  image_url: /content/stories/campus_arc1_v7/images/scene_026.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Вика держит твой взгляд. Её ладонь ненадолго скользит по твоей руке.
+    en: Vika holds your gaze. Her hand briefly slides along your arm.
+    es: Vika sostiene tu mirada. Su mano se desliza brevemente por tu brazo.
+    de: Vika hält deinen Blick. Ihre Hand gleitet kurz an deinem Arm entlang.
+    fr: Vika soutient ton regard. Sa main glisse brièvement le long de ton bras.
+  choices:
+  - code: to_dorm_from_party
+    label:
+      ru: Вернуться в общагу
+      en: To dorm
+      es: Al dormitorio
+      de: Ins Wohnheim
+      fr: Rentrer au dortoir
+    leads_to: scene_027
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+- code: scene_028
+  image_url: /content/stories/campus_arc1_v7/images/scene_028.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: Ты лавируешь между кафе и клубом, сверяясь со временем и сообщениями.
+    en: You juggle between café and club, checking time and messages.
+    es: Alternas entre café y club, mirando la hora y los mensajes.
+    de: Du pendelst zwischen Café und Club, prüfst Zeit und Nachrichten.
+    fr: Tu jongles entre café et club, surveillant l’heure et les messages.
+  choices:
+  - code: short_cafe
+    label:
+      ru: Заскочить к Алине
+      en: Drop by Alina
+      es: Pasar con Alina
+      de: Kurz zu Alina
+      fr: Passer voir Alina
+    leads_to: scene_029
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+  - code: short_party
+    label:
+      ru: Заглянуть к Вике
+      en: Drop by Vika
+      es: Pasar con Vika
+      de: Kurz zu Vika
+      fr: Passer voir Vika
+    leads_to: scene_030
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_029
+  image_url: /content/stories/campus_arc1_v7/images/scene_029.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Короткая остановка у Алины. Она ценит, что ты успел.
+    en: A short stop with Alina. She appreciates you made it.
+    es: Parada breve con Alina. Aprecia que hayas venido.
+    de: Kurzer Stopp bei Alina. Sie schätzt, dass du gekommen bist.
+    fr: Bref arrêt chez Alina. Elle apprécie ta venue.
+  choices:
+  - code: to_dorm_from_both1
+    label:
+      ru: В общагу
+      en: To dorm
+      es: Al dormitorio
+      de: Ins Wohnheim
+      fr: Au dortoir
+    leads_to: scene_027
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+- code: scene_030
+  image_url: /content/stories/campus_arc1_v7/images/scene_030.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Короткий заход к Вике. Она смеётся и тянет за руку, но ты спешишь.
+    en: A quick drop by Vika. She laughs and pulls your hand, but you’re in a hurry.
+    es: Breve parada con Vika. Ella ríe y te toma la mano, pero tienes prisa.
+    de: Kurzer Besuch bei Vika. Sie lacht, zieht deine Hand, aber du musst los.
+    fr: Bref passage chez Vika. Elle rit et te prend la main, mais tu files.
+  choices:
+  - code: to_dorm_from_both2
+    label:
+      ru: В общагу
+      en: To dorm
+      es: Al dormitorio
+      de: Ins Wohnheim
+      fr: Au dortoir
+    leads_to: scene_027
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+- code: scene_027
+  image_url: /content/stories/campus_arc1_v7/images/scene_027.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Поздняя ночь. Тихий коридор общаги. Чья дверь перед тобой?
+    en: Late night. Quiet dorm hallway. Whose door is in front of you?
+    es: Noche tardía. Pasillo silencioso. ¿De quién es la puerta frente a ti?
+    de: Späte Nacht. Ruhiger Flur. Wessen Tür ist vor dir?
+    fr: Nuit tard. Couloir calme. À quelle porte te tiens‑tu ?
+  choices:
+  - code: knock_vika_paid
+    label:
+      ru: 💎 Постучаться к Вике (10)
+      en: 💎 Knock Vika (10)
+      es: 💎 Llamar a Vika (10)
+      de: 💎 Bei Vika klopfen (10)
+      fr: 💎 Frapper chez Vika (10)
+    leads_to: scene_031
+    gem_cost: 10
+    heat_points: 1
+    is_premium: false
+  - code: knock_alina_paid
+    label:
+      ru: 💎 Постучаться к Алине (10)
+      en: 💎 Knock Alina (10)
+      es: 💎 Llamar a Alina (10)
+      de: 💎 Bei Alina klopfen (10)
+      fr: 💎 Frapper chez Alina (10)
+    leads_to: scene_034
+    gem_cost: 10
+    heat_points: 1
+    is_premium: false
+  - code: premium_afterhours
+    label:
+      ru: '⭐ Премиум: после полуночи втроём'
+      en: '⭐ Premium: after‑hours trio'
+      es: '⭐ Premium: tras horas, los tres'
+      de: '⭐ Premium: nach Mitternacht zu dritt'
+      fr: '⭐ Premium : après minuit à trois'
+    leads_to: scene_p01
+    gem_cost: 0
+    heat_points: 0
+    is_premium: true
+  - code: go_sleep
+    label:
+      ru: Передумать и лечь спать
+      en: Change your mind & sleep
+      es: Cambiar de idea y dormir
+      de: Umentscheiden & schlafen
+      fr: Changer d’avis & dormir
+    leads_to: scene_036
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_031
+  image_url: /content/stories/campus_arc1_v7/images/scene_031.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: Вика открывает в домашнем виде, улыбается и жестом приглашает войти.
+    en: Vika opens in homewear, smiles, and gestures you in.
+    es: Vika abre en ropa de casa, sonríe y te hace pasar.
+    de: Vika öffnet in Hauskleidung, lächelt und bittet dich herein.
+    fr: Vika ouvre en tenue d’intérieur, sourit et t’invite à entrer.
+  choices:
+  - code: gentle_hug
+    label:
+      ru: Осторожно обнять
+      en: Gently hug
+      es: Abrazar con cuidado
+      de: Sanft umarmen
+      fr: Enlacer doucement
+    leads_to: scene_032
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+  - code: stay_by_door
+    label:
+      ru: Остаться у двери
+      en: Stay by the door
+      es: Quedarte à la porte
+      de: An der Tür bleiben
+      fr: Rester près de la porte
+    leads_to: scene_033
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_032
+  image_url: /content/stories/campus_arc1_v7/images/scene_032.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Её плечи расслабляются в объятии. Если у тебя плейлист‑подарок — она просит включить.
+    en: Her shoulders relax in your hug. If you have the music gift, she asks to play it.
+    es: Sus hombros se relajan en tu abrazo. Si tienes playlist regalo, te pide ponerla.
+    de: Ihre Schultern entspannen sich. Hast du die Musik‑Playlist, bittet sie, sie anzumachen.
+    fr: Ses épaules se détendent. Si tu as la playlist cadeau, elle te demande de la lancer.
+  choices:
+  - code: use_music
+    label:
+      ru: Включить плейлист (если есть)
+      en: Play the playlist (if owned)
+      es: Poner la playlist (si tienes)
+      de: Playlist abspielen (falls vorhanden)
+      fr: Lancer la playlist (si possédée)
+    leads_to: scene_037
+    gem_cost: 0
+    heat_points: 2
+    is_premium: false
+    requires_item: item_musicgift
+  - code: goodnight_vika
+    label:
+      ru: Пожелать спокойной ночи
+      en: Wish good night
+      es: Desear buenas noches
+      de: Gute Nacht wünschen
+      fr: Souhaiter bonne nuit
+    leads_to: scene_037
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+- code: scene_033
+  image_url: /content/stories/campus_arc1_v7/images/scene_033.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Негромкий разговор у порога. Вика поправляет прядь волос.
+    en: Soft talk at the threshold. Vika tucks a strand of hair.
+    es: Charla suave en el umbral. Vika acomoda un mechón.
+    de: Leises Gespräch an der Schwelle. Vika streicht eine Strähne zur Seite.
+    fr: Basses voix sur le seuil. Vika remet une mèche en place.
+  choices:
+  - code: goodnight_vika2
+    label:
+      ru: Пожелать спокойной ночи
+      en: Wish good night
+      es: Desear buenas noches
+      de: Gute Nacht wünschen
+      fr: Souhaiter bonne nuit
+    leads_to: scene_037
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_034
+  image_url: /content/stories/campus_arc1_v7/images/scene_034.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: Алина выглядывает сонная, но рада. «Минутка найдётся».
+    en: Alina peeks out sleepy but happy. “I can spare a minute.”
+    es: Alina asoma somnolienta pero contenta. «Tengo un minuto».
+    de: Alina schaut verschlafen raus, freut sich aber. „Ich habe eine Minute.“
+    fr: Alina entrouvre, ensommeillée mais ravie. « J’ai une minute. »
+  choices:
+  - code: hold_hand
+    label:
+      ru: Взять за руку
+      en: Hold her hand
+      es: Tomarle la mano
+      de: An die Hand nehmen
+      fr: Lui prendre la main
+    leads_to: scene_035
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+  - code: lean_wall
+    label:
+      ru: Прислониться к стене и говорить
+      en: Lean on wall and talk
+      es: Apoyarte en la pared y hablar
+      de: An die Wand lehnen und reden
+      fr: S’adosser au mur et parler
+    leads_to: scene_035
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_035
+  image_url: /content/stories/campus_arc1_v7/images/scene_035.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Её ладонь не спешит отпускать. Если у тебя мини‑парфюм — она шутит, что хочет «пару капель».
+    en: Her hand doesn’t hurry to let go. If you have mini perfume—she jokes she wants “a couple drops.”
+    es: Su mano no se suelta rápido. Si tienes mini perfume—bromea que quiere «unas gotas».
+    de: Ihre Hand lässt nicht rasch los. Hast du Mini‑Parfüm—sie scherzt, sie wolle „ein paar Tropfen“.
+    fr: Sa main ne lâche pas vite. Si tu as le mini parfum—elle plaisante qu’elle veut « deux gouttes ».
+  choices:
+  - code: use_perfume
+    label:
+      ru: Дать мини‑парфюм (если есть)
+      en: Offer mini perfume (if owned)
+      es: Dar mini perfume (si tienes)
+      de: Mini‑Parfüm geben (falls da)
+      fr: Offrir mini parfum (si possédé)
+    leads_to: scene_037
+    gem_cost: 0
+    heat_points: 2
+    is_premium: false
+    requires_item: item_perfume
+  - code: goodnight_alina
+    label:
+      ru: Пожелать спокойной ночи
+      en: Wish good night
+      es: Desear buenas noches
+      de: Gute Nacht wünschen
+      fr: Souhaiter bonne nuit
+    leads_to: scene_037
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+- code: scene_036
+  image_url: /content/stories/campus_arc1_v7/images/scene_036.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Ты решаешь лечь спать. Мысли крутятся вокруг сегодняшних встреч.
+    en: You decide to sleep. Thoughts circle around today’s meetings.
+    es: Decides dormir. Pensamientos giran en torno a lo de hoy.
+    de: Du gehst schlafen. Gedanken kreisen um die heutigen Begegnungen.
+    fr: Tu vas dormir. Tes pensées tournent autour des rencontres du jour.
+  choices:
+  - code: to_morning
+    label:
+      ru: К утру
+      en: To morning
+      es: A la mañana
+      de: Zum Morgen
+      fr: Au matin
+    leads_to: scene_037
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_037
+  image_url: /content/stories/campus_arc1_v7/images/scene_037.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: Раннее утро. В холле общаги вы встречаетесь взглядами втроём.
+    en: Early morning. In the dorm hall, the three of you meet eyes again.
+    es: Mañana temprano. En el hall del dormitorio, los tres os cruzáis miradas.
+    de: Früher Morgen. Im Wohnheimflur trefft ihr euch wieder mit Blicken.
+    fr: Tôt le matin. Dans le hall du dortoir, vos regards se retrouvent.
+  choices:
+  - code: smile_vika
+    label:
+      ru: Улыбнуться Вике
+      en: Smile at Vika
+      es: Sonreír a Vika
+      de: Vika anlächeln
+      fr: Sourire à Vika
+    leads_to: scene_038
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+  - code: smile_alina
+    label:
+      ru: Улыбнуться Алине
+      en: Smile at Alina
+      es: Sonreír a Alina
+      de: Alina anlächeln
+      fr: Sourire à Alina
+    leads_to: scene_039
+    gem_cost: 0
+    heat_points: 1
+    is_premium: false
+  - code: premium_hint_paid
+    label:
+      ru: ⭐💎 Намёк на втроём (20)
+      en: ⭐💎 Hint at a trio (20)
+      es: ⭐💎 Insinuar trio (20)
+      de: ⭐💎 Andeuten zu dritt (20)
+      fr: ⭐💎 Suggérer à trois (20)
+    leads_to: scene_p01
+    gem_cost: 20
+    heat_points: 2
+    is_premium: true
+- code: scene_038
+  image_url: /content/stories/campus_arc1_v7/images/scene_038.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Вика отвечает тёплой улыбкой. Взгляд задерживается дольше обычного.
+    en: Vika returns a warm smile. Her gaze lingers longer than usual.
+    es: Vika responde con una sonrisa cálida. Su mirada se alarga más de lo normal.
+    de: Vika erwidert ein warmes Lächeln. Ihr Blick verweilt ungewöhnlich lange.
+    fr: Vika répond par un sourire chaud. Son regard dure plus que d’ordinaire.
+  choices:
+  - code: to_classes
+    label:
+      ru: Идти на пары
+      en: Head to classes
+      es: Ir a clase
+      de: Zu den Vorlesungen
+      fr: Aller en cours
+    leads_to: scene_040
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_039
+  image_url: /content/stories/campus_arc1_v7/images/scene_039.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: Алина ловит твой взгляд и кивает, намекая на продолжение позже.
+    en: Alina catches your eyes and nods, hinting at a later continuation.
+    es: Alina capta tu mirada y asiente, insinuando continuar más tarde.
+    de: Alina fängt deinen Blick und nickt, als Hinweis auf später.
+    fr: Alina accroche ton regard et hoche la tête, promettant une suite.
+  choices:
+  - code: to_classes2
+    label:
+      ru: Идти на пары
+      en: Head to classes
+      es: Ir a clase
+      de: Zu den Vorlesungen
+      fr: Aller en cours
+    leads_to: scene_040
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_040
+  image_url: /content/stories/campus_arc1_v7/images/scene_040.webp
+  energy_cost: 1
+  is_premium: false
+  text:
+    ru: Перед корпусом кампуса вы расходитесь по аудиториям. Продолжение — в Арке 2.
+    en: Outside the campus building, you split for classes. To be continued in Arc 2.
+    es: Fuera del edificio del campus, os separáis para las clases. Continuará en el Arco 2.
+    de: Vor dem Campusgebäude trennt ihr euch zu den Vorlesungen. Fortsetzung in Bogen 2.
+    fr: Devant le bâtiment du campus, vous vous séparez pour les cours. Suite à l’Arc 2.
+  choices:
+  - code: continue_arc2
+    label:
+      ru: Перейти к Арке 2
+      en: Proceed to Arc 2
+      es: Pasar al Arco 2
+      de: Zu Bogen 2
+      fr: Aller à l’Arc 2
+    leads_to: null
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+- code: scene_p01
+  image_url: /content/stories/campus_arc1_v7/images/scene_101.webp
+  energy_cost: 1
+  is_premium: true
+  text:
+    ru: 'Премиум: обе девушки переглядываются. Ночной холл пуст. Они предлагают уединиться.'
+    en: 'Premium: both girls exchange a glance. The night hall is empty. They suggest a quiet corner.'
+    es: 'Premium: ambas se miran. El vestíbulo nocturno está vacío. Proponen un rincón tranquilo.'
+    de: 'Premium: beide tauschen einen Blick. Der nächtliche Flur ist leer. Sie schlagen eine stille Ecke vor.'
+    fr: 'Premium : les deux échangent un regard. Le hall nocturne est vide. Elles proposent un coin discret.'
+  choices:
+  - code: p_follow
+    label:
+      ru: Следовать их темпу
+      en: Follow their pace
+      es: Seguir su ritmo
+      de: Ihrem Tempo folgen
+      fr: Suivre leur rythme
+    leads_to: scene_p02
+    gem_cost: 0
+    heat_points: 1
+    is_premium: true
+  - code: p_stay_formal
+    label:
+      ru: Остаться сдержанным
+      en: Stay reserved
+      es: Mantenerte reservado
+      de: Zurückhaltend bleiben
+      fr: Rester réservé
+    leads_to: scene_037
+    gem_cost: 0
+    heat_points: 0
+    is_premium: true
+- code: scene_p02
+  image_url: /content/stories/campus_arc1_v7/images/scene_102.webp
+  energy_cost: 1
+  is_premium: true
+  text:
+    ru: Шёпот и игривые взгляды. Если у тебя букет — каждая получает по цветку.
+    en: Whispers and playful looks. If you have flowers—each gets a bloom.
+    es: Susurros y miradas juguetonas. Si tienes flores—cada una recibe una.
+    de: Flüstern und verspielte Blicke. Hast du Blumen—jede bekommt eine.
+    fr: Chuchotements et regards malicieux. Si tu as des fleurs—chacune reçoit une fleur.
+  choices:
+  - code: p_give_flowers
+    label:
+      ru: Подарить цветы (если есть)
+      en: Give flowers (if owned)
+      es: Dar flores (si tienes)
+      de: Blumen geben (falls vorhanden)
+      fr: Offrir des fleurs (si possédées)
+    leads_to: scene_p03
+    gem_cost: 0
+    heat_points: 2
+    is_premium: true
+    requires_item: item_flowers
+  - code: p_continue
+    label:
+      ru: Продолжать
+      en: Continue
+      es: Continuar
+      de: Weiter
+      fr: Continuer
+    leads_to: scene_p03
+    gem_cost: 0
+    heat_points: 1
+    is_premium: true
+- code: scene_p03
+  image_url: /content/stories/campus_arc1_v7/images/scene_103.webp
+  energy_cost: 1
+  is_premium: true
+  text:
+    ru: Они задают темп; ты поддерживаешь. Без спешки, уважая границы.
+    en: They set the pace; you follow. No rush, respecting boundaries.
+    es: Ellas marcan el ritmo; tú acompañas. Sin prisa, respetando límites.
+    de: Sie geben das Tempo vor; du folgst. Ohne Eile, Grenzen respektierend.
+    fr: Elles donnent le tempo ; tu accompagnes. Sans hâte, en respectant les limites.
+  choices:
+  - code: p_musicgift
+    label:
+      ru: Включить плейлист‑подарок (если есть)
+      en: Play music gift (if owned)
+      es: Poner playlist regalo (si tienes)
+      de: Playlist‑Geschenk abspielen (falls da)
+      fr: Lancer playlist cadeau (si possédée)
+    leads_to: scene_p04
+    gem_cost: 0
+    heat_points: 2
+    is_premium: true
+    requires_item: item_musicgift
+  - code: p_skip_music
+    label:
+      ru: Без музыки
+      en: No music
+      es: Sin música
+      de: Ohne Musik
+      fr: Sans musique
+    leads_to: scene_p04
+    gem_cost: 0
+    heat_points: 0
+    is_premium: true
+- code: scene_p04
+  image_url: /content/stories/campus_arc1_v7/images/scene_104.webp
+  energy_cost: 1
+  is_premium: true
+  text:
+    ru: Музыка из твоего плейлиста усиливает момент, если он у тебя есть.
+    en: Music from your playlist heightens the moment, if you have it.
+    es: La música de tu playlist intensifica el momento, si la tienes.
+    de: Musik aus deiner Playlist verstärkt den Moment, falls vorhanden.
+    fr: La musique de ta playlist amplifie l’instant, si tu l’as.
+  choices:
+  - code: p_chocolate
+    label:
+      ru: Поделиться шоколадом (если есть)
+      en: Share chocolate (if owned)
+      es: Compartir chocolate (si tienes)
+      de: Schokolade teilen (falls da)
+      fr: Partager chocolat (si possédé)
+    leads_to: scene_p05
+    gem_cost: 0
+    heat_points: 1
+    is_premium: true
+    requires_item: item_chocolate
+  - code: p_next
+    label:
+      ru: Дальше
+      en: Next
+      es: Siguiente
+      de: Weiter
+      fr: Suivant
+    leads_to: scene_p05
+    gem_cost: 0
+    heat_points: 0
+    is_premium: true
+- code: scene_p05
+  image_url: /content/stories/campus_arc1_v7/images/scene_105.webp
+  energy_cost: 1
+  is_premium: true
+  text:
+    ru: 'Тёплая близость, шутки и общее настроение: всё становится смелее.'
+    en: Warm closeness, jokes, shared mood—everything grows bolder.
+    es: Cercanía cálida, bromas y ánimo compartido—todo se vuelve más atrevido.
+    de: Warme Nähe, Scherze, gemeinsame Stimmung—alles wird kühner.
+    fr: Proximité chaleureuse, plaisanteries, ambiance commune—tout devient plus audacieux.
+  choices:
+  - code: p_close
+    label:
+      ru: Завершить на высокой ноте
+      en: Wrap up on a high note
+      es: Terminar en alto
+      de: Mit Höhepunkt abschließen
+      fr: Conclure en beauté
+    leads_to: scene_p06
+    gem_cost: 0
+    heat_points: 2
+    is_premium: true
+- code: scene_p06
+  image_url: /content/stories/campus_arc1_v7/images/scene_106.webp
+  energy_cost: 1
+  is_premium: true
+  text:
+    ru: Вы завершаете встречу улыбками и договорённостью увидеться позже.
+    en: You wrap up with smiles and a plan to meet later.
+    es: Termináis con sonrisas y plan para veros luego.
+    de: Ihr schließt mit Lächeln und der Verabredung, euch später zu sehen.
+    fr: Vous concluez par des sourires et l’idée de vous revoir plus tard.
+  choices:
+  - code: p_back_morning
+    label:
+      ru: К утру
+      en: To morning
+      es: A la mañana
+      de: Zum Morgen
+      fr: Au matin
+    leads_to: scene_037
+    gem_cost: 0
+    heat_points: 0
+    is_premium: true
+- code: scene_shop
+  image_url: /content/stories/campus_arc1_v7/images/scene_999.webp
+  energy_cost: 0
+  is_premium: false
+  text:
+    ru: 'Кампус‑шоп: выбери предмет. Покупка списывает гемы и добавляет предмет в инвентарь.'
+    en: 'Campus shop: choose an item. Purchase spends gems and adds to inventory.'
+    es: 'Tienda del campus: elige un objeto. La compra gasta gemas y lo agrega al inventario.'
+    de: 'Campus‑Shop: Wähle einen Gegenstand. Kauf kostet Gems und füllt dein Inventar.'
+    fr: 'Boutique du campus : choisis un objet. L’achat dépense des gemmes et ajoute l’objet.'
+  choices:
+  - code: buy_item_flowers
+    label:
+      ru: 'Купить: Букет цветов — 8💎'
+      en: 'Buy: Bouquet of flowers — 8💎'
+      es: 'Comprar: Ramo de flores — 8💎'
+      de: 'Kaufen: Blumenstrauß — 8💎'
+      fr: 'Acheter : Bouquet de fleurs — 8💎'
+    leads_to: scene_shop
+    gem_cost: 8
+    heat_points: 0
+    is_premium: false
+  - code: buy_item_chocolate
+    label:
+      ru: 'Купить: Шоколад — 6💎'
+      en: 'Buy: Chocolate — 6💎'
+      es: 'Comprar: Chocolate — 6💎'
+      de: 'Kaufen: Schokolade — 6💎'
+      fr: 'Acheter : Chocolat — 6💎'
+    leads_to: scene_shop
+    gem_cost: 6
+    heat_points: 0
+    is_premium: false
+  - code: buy_item_perfume
+    label:
+      ru: 'Купить: Мини‑парфюм — 12💎'
+      en: 'Buy: Mini perfume — 12💎'
+      es: 'Comprar: Mini perfume — 12💎'
+      de: 'Kaufen: Mini‑Parfüm — 12💎'
+      fr: 'Acheter : Mini parfum — 12💎'
+    leads_to: scene_shop
+    gem_cost: 12
+    heat_points: 0
+    is_premium: false
+  - code: buy_item_towel
+    label:
+      ru: 'Купить: Мягкое полотенце — 5💎'
+      en: 'Buy: Soft towel — 5💎'
+      es: 'Comprar: Toalla suave — 5💎'
+      de: 'Kaufen: Weiches Handtuch — 5💎'
+      fr: 'Acheter : Serviette douce — 5💎'
+    leads_to: scene_shop
+    gem_cost: 5
+    heat_points: 0
+    is_premium: false
+  - code: buy_item_tshirt
+    label:
+      ru: 'Купить: Чистая футболка — 7💎'
+      en: 'Buy: Clean T‑shirt — 7💎'
+      es: 'Comprar: Camiseta limpia — 7💎'
+      de: 'Kaufen: Sauberes T‑Shirt — 7💎'
+      fr: 'Acheter : T‑shirt propre — 7💎'
+    leads_to: scene_shop
+    gem_cost: 7
+    heat_points: 0
+    is_premium: false
+  - code: buy_item_hairclip
+    label:
+      ru: 'Купить: Заколка для волос — 4💎'
+      en: 'Buy: Hair clip — 4💎'
+      es: 'Comprar: Horquilla — 4💎'
+      de: 'Kaufen: Haarclip — 4💎'
+      fr: 'Acheter : Barrette — 4💎'
+    leads_to: scene_shop
+    gem_cost: 4
+    heat_points: 0
+    is_premium: false
+  - code: buy_item_vip_pass
+    label:
+      ru: 'Купить: VIP‑браслет — 15💎'
+      en: 'Buy: VIP wristband — 15💎'
+      es: 'Comprar: Pulsera VIP — 15💎'
+      de: 'Kaufen: VIP‑Armband — 15💎'
+      fr: 'Acheter : Bracelet VIP — 15💎'
+    leads_to: scene_shop
+    gem_cost: 15
+    heat_points: 0
+    is_premium: false
+  - code: buy_item_musicgift
+    label:
+      ru: 'Купить: Плейлист‑подарок — 6💎'
+      en: 'Buy: Music gift playlist — 6💎'
+      es: 'Comprar: Lista musical de regalo — 6💎'
+      de: 'Kaufen: Musik‑Geschenk‑Playlist — 6💎'
+      fr: 'Acheter : Playlist cadeau — 6💎'
+    leads_to: scene_shop
+    gem_cost: 6
+    heat_points: 0
+    is_premium: false
+  - code: back_start
+    label:
+      ru: ⬅ Вернуться к началу
+      en: ⬅ Back to start
+      es: ⬅ Volver al inicio
+      de: ⬅ Zurück zum Start
+      fr: ⬅ Retour au début
+    leads_to: scene_001
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false
+  - code: back_evening
+    label:
+      ru: ⬅ Вернуться к вечеру
+      en: ⬅ Back to evening
+      es: ⬅ Volver a la noche
+      de: ⬅ Zurück zum Abend
+      fr: ⬅ Retour à la soirée
+    leads_to: scene_019
+    gem_cost: 0
+    heat_points: 0
+    is_premium: false

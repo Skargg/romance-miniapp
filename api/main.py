@@ -14,6 +14,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+import logging
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -35,13 +36,15 @@ from .models import (
 
 
 app = FastAPI(title="Romance MiniApp API")
+logger = logging.getLogger("uvicorn.error")
 # Simple in-memory catalog for demo (to be replaced with DB/YAML items)
 ITEM_CATALOG: dict[str, dict[str, int]] = {
     "office_flirt": {
         "tshirt_your": 10,
         "whip": 15,
         "sport_top_red": 5,
-    }
+    },
+    "campus_arc1_v2": {}
 }
 
 
@@ -56,20 +59,26 @@ async def on_startup():
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
 
-# CORS (на время разработки)
+# CORS (конфигурируется через env)
+ALLOWED_ORIGINS = [
+    o.strip() for o in os.getenv("ALLOWED_ORIGINS", "*").split(",") if o.strip()
+]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"]
+    allow_headers=["*"],
 )
 
-# Статика фронтенда (если собран dist)
+# Статика фронтенда (если собран dist) + контент
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DIST_DIR = PROJECT_ROOT / "frontend" / "dist"
 if DIST_DIR.exists():
     app.mount("/assets", StaticFiles(directory=DIST_DIR / "assets"), name="assets")
+CONTENT_DIR = PROJECT_ROOT / "content"
+if CONTENT_DIR.exists():
+    app.mount("/content", StaticFiles(directory=CONTENT_DIR), name="content")
 
 
 @app.get("/api/health")
@@ -130,6 +139,10 @@ class StateOut(BaseModel):
     shop: List[ShopItemOut] = []
 
 
+class StoriesOut(BaseModel):
+    stories: List[str]
+
+
 class ChooseIn(BaseModel):
     story_code: str
     choice_code: str
@@ -146,6 +159,7 @@ class DevGrantIn(BaseModel):
 
 class AgeConfirmIn(BaseModel):
     agree: bool
+    init_data: Optional[str] = None
 
 
 # -------------------------------
@@ -408,15 +422,28 @@ async def _build_state(
 # -------------------------------
 
 
+DEFAULT_STORY_CODE = os.getenv("DEFAULT_STORY_CODE", "campus_arc1_v7")
+
+
 @app.get("/api/state", response_model=StateOut)
 async def get_state(
-    story: str,
+    story: Optional[str] = Query(None),
     lang: str = "ru",
     x_telegram_init_data: Optional[str] = Header(None, alias="X-Telegram-Init-Data"),
     init_data_q: Optional[str] = Query(None, alias="init_data"),
     x_debug_tg_id: Optional[str] = Header(None, alias="X-Debug-Tg-Id"),
     session: AsyncSession = Depends(get_session),
 ):
+    if os.getenv("LOG_INIT_DATA") == "1":
+        try:
+            logger.info(
+                "init_data header len=%s, query len=%s, has_debug=%s",
+                len(x_telegram_init_data or ""),
+                len(init_data_q or ""),
+                bool(x_debug_tg_id),
+            )
+        except Exception:
+            pass
     tg_id: Optional[int] = None
     # Сначала пробуем Telegram initData (header или query)
     tg_id = _verify_telegram_init_data(x_telegram_init_data or init_data_q)
@@ -432,12 +459,19 @@ async def get_state(
     user, wallet = await _get_or_create_user(session, tg_id, lang)
     # ленивое восстановление энергии
     next_energy_in = _regenerate_energy(wallet, _now_ts())
-    story_row = await _get_story(session, story)
+    story_code = story or DEFAULT_STORY_CODE
+    story_row = await _get_story(session, story_code)
     progress, _ = await _get_or_create_progress(session, user, story_row)
     await session.commit()
     state = await _build_state(session, user, wallet, story_row, progress.current_scene, lang)
     state.next_energy_in = next_energy_in
     return state
+
+
+@app.get("/api/stories", response_model=StoriesOut)
+async def list_stories(session: AsyncSession = Depends(get_session)):
+    rows = (await session.execute(select(Story.code))).scalars().all()
+    return StoriesOut(stories=rows)
 
 
 # -------------------------------
@@ -452,6 +486,16 @@ async def post_choose(
     x_debug_tg_id: Optional[str] = Header(None, alias="X-Debug-Tg-Id"),
     session: AsyncSession = Depends(get_session),
 ):
+    if os.getenv("LOG_INIT_DATA") == "1":
+        try:
+            logger.info(
+                "choose: body.init_data len=%s, header len=%s, has_debug=%s",
+                len(body.init_data or ""),
+                len(x_telegram_init_data or ""),
+                bool(x_debug_tg_id),
+            )
+        except Exception:
+            pass
     tg_id: Optional[int] = None
     tg_id = _verify_telegram_init_data(body.init_data or x_telegram_init_data)
     if tg_id is None:
@@ -625,6 +669,15 @@ async def post_restart(
     x_debug_tg_id: Optional[str] = Header(None, alias="X-Debug-Tg-Id"),
     session: AsyncSession = Depends(get_session),
 ):
+    if os.getenv("LOG_INIT_DATA") == "1":
+        try:
+            logger.info(
+                "restart: header len=%s, has_debug=%s",
+                len(x_telegram_init_data or ""),
+                bool(x_debug_tg_id),
+            )
+        except Exception:
+            pass
     tg_id: Optional[int] = _verify_telegram_init_data(x_telegram_init_data)
     if tg_id is None:
         if not x_debug_tg_id:
@@ -676,6 +729,15 @@ async def post_item_buy(
     x_debug_tg_id: Optional[str] = Header(None, alias="X-Debug-Tg-Id"),
     session: AsyncSession = Depends(get_session),
 ):
+    if os.getenv("LOG_INIT_DATA") == "1":
+        try:
+            logger.info(
+                "item_buy: header len=%s, has_debug=%s",
+                len(x_telegram_init_data or ""),
+                bool(x_debug_tg_id),
+            )
+        except Exception:
+            pass
     tg_id: Optional[int] = _verify_telegram_init_data(x_telegram_init_data)
     if tg_id is None:
         if not x_debug_tg_id:
@@ -730,6 +792,17 @@ async def post_dev_grant(
     x_debug_tg_id: Optional[str] = Header(None, alias="X-Debug-Tg-Id"),
     session: AsyncSession = Depends(get_session),
 ):
+    if os.getenv("ENABLE_DEV_ENDPOINTS") != "1":
+        raise HTTPException(status_code=404, detail="not_found")
+    if os.getenv("LOG_INIT_DATA") == "1":
+        try:
+            logger.info(
+                "dev_grant: header len=%s, has_debug=%s",
+                len(x_telegram_init_data or ""),
+                bool(x_debug_tg_id),
+            )
+        except Exception:
+            pass
     tg_id: Optional[int] = _verify_telegram_init_data(x_telegram_init_data)
     if tg_id is None:
         if not x_debug_tg_id:
@@ -753,9 +826,21 @@ async def post_age_confirm(
     body: AgeConfirmIn,
     x_telegram_init_data: Optional[str] = Header(None, alias="X-Telegram-Init-Data"),
     x_debug_tg_id: Optional[str] = Header(None, alias="X-Debug-Tg-Id"),
+    init_data_q: Optional[str] = Query(None, alias="init_data"),
     session: AsyncSession = Depends(get_session),
 ):
-    tg_id: Optional[int] = _verify_telegram_init_data(x_telegram_init_data)
+    if os.getenv("LOG_INIT_DATA") == "1":
+        try:
+            logger.warning(
+                "age_confirm: body.init_data len=%s, header len=%s, query len=%s, has_debug=%s",
+                len(body.init_data or ""),
+                len(x_telegram_init_data or ""),
+                len(init_data_q or ""),
+                bool(x_debug_tg_id),
+            )
+        except Exception:
+            pass
+    tg_id: Optional[int] = _verify_telegram_init_data(body.init_data or x_telegram_init_data or init_data_q)
     if tg_id is None:
         if not x_debug_tg_id:
             raise HTTPException(status_code=401, detail="missing_tg_id")
